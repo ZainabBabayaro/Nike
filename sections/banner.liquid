@@ -1,0 +1,36 @@
+<section>
+  <div class="banner-wrapper"></div> 
+  </section>
+
+<style>
+  .banner-wrapper {
+    background: {{ section.settings.background }};
+    text: {{ section.settings.text_color }};
+  
+  }
+
+</style>
+
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#F4F4F4"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "#000000"
+      }
+    ],
+    "presets": [
+      {
+        "name": "banner"
+      }
+    ]
+  }
+{% endschema %}  
